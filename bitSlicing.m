@@ -1,0 +1,35 @@
+originalImage=imread('lena512.mat');
+Bitplane=bitget(originalImage,1); 
+figure;
+subplot(4,2,1); 
+imshow(logical(Bitplane));
+title('Bit plane 1');
+Bitplane=bitget(originalImage,2); 
+subplot(4,2,2);
+imshow(logical(Bitplane));
+title('Bit plane 2');
+Bitplane=bitget(originalImage,3);  
+subplot(4,2,3);
+imshow(logical(Bitplane));
+title('Bit plane 3');
+
+Bitplane=bitget(originalImage,4); 
+subplot(4,2,4);
+imshow(logical(Bitplane));
+title('Bit plane 4');
+Bitplane=bitget(originalImage,5);
+subplot(4,2,5); 
+imshow(logical(Bitplane));
+title('Bit plane 5');
+Bitplane=bitget(originalImage,6); 
+subplot(4,2,6);
+imshow(logical(Bitplane));
+title('Bit plane 6');
+
+Bitplane=bitget(originalImage,7);
+subplot(4,2,7);
+imshow(logical(Bitplane));
+title('Bit plane 7');
+Bitplane=bitget(originalImage,8); 
+subplot(4,2,8);
+imshow(logical(Bitplane));title('Bit plane 8');
