@@ -1,4 +1,4 @@
-originalImage=imread('lena512.mat');
+originalImage=imread('C:/Users/Admin/Downloads/lena512.mat');
 Bitplane=bitget(originalImage,1); 
 figure;
 subplot(4,2,1); 
@@ -33,3 +33,7 @@ title('Bit plane 7');
 Bitplane=bitget(originalImage,8); 
 subplot(4,2,8);
 imshow(logical(Bitplane));title('Bit plane 8');
+figure;
+Bitplane=bitget(originalImage,8)*(2^8)+bitget(originalImage,7)*(2^7); 
+imshow(logical(Bitplane));
+title('Bit plane 8 and 7');

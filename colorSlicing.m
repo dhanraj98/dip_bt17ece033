@@ -1,5 +1,5 @@
 % Read in original RGB image.
-rgbImage = imread('lena512color.tiff');
+rgbImage = imread('C:/Users/Admin/Downloads/lena512color.tiff');
 % Extract color channels.
 redChannel = rgbImage(:,:,1); % Red channel
 greenChannel = rgbImage(:,:,2); % Green channel
@@ -35,4 +35,3 @@ set(gcf, 'Units', 'Normalized', 'OuterPosition', [0, 0, 1, 1]);
 % Get rid of tool bar and pulldown menus that are along top of figure.
 % set(gcf, 'Toolbar', 'none', 'Menu', 'none');
 % Give a name to the title bar.
-

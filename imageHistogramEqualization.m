@@ -1,5 +1,5 @@
 
-OriginalImage=imread('lena512.mat');
+OriginalImage=imread('C:/Users/Admin/Downloads/lena512.mat');
 
 numofpixels=size(OriginalImage,1)*size(OriginalImage,2);
 
@@ -18,7 +18,7 @@ probf=zeros(256,1);
 
 probc=zeros(256,1);
 
-CumulativeDistributionProbability=zeros(256,1);
+cdp=zeros(256,1);
 
 output=zeros(256,1);
 
@@ -44,15 +44,15 @@ sum=0;
 
 no_bins=255;
 
-%The CumulativeDistributionProbabilityulative distribution? probability is calculated. 
+%The cumulative distribution? probability is calculated and stored in cdp 
 
 for i=1:size(probf)
 
    sum=sum+freq(i);
 
-   CumulativeDistributionProbability(i)=sum;
+   cdp(i)=sum;
 
-   probc(i)=CumulativeDistributionProbability(i)/numofpixels;
+   probc(i)=cdp(i)/numofpixels;
 
    output(i)=round(probc(i)*no_bins);
 
